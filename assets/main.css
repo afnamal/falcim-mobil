@@ -1,0 +1,26 @@
+body {
+  background: #f9f9fcb0;
+  color: #444;
+}
+.container {
+  width: 90%;
+  max-width: 960px;
+  margin:auto;
+  border-radius: 20px;
+  box-shadow: 3px 6px 9px rgba(228, 200, 254, 0.219);
+  padding: 10px;
+}
+.error {
+  color: #9c3333;
+  font-size: 14px;
+}
+button {
+  text-decoration: none;
+  background: #33a464;
+  color: #fff;
+  font-weight: bold;
+  border: 0;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
