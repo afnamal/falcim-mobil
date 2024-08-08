@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  View,
-  Text,
-  Image,
-  StyleSheet,
-  TouchableOpacity,
-  ScrollView,
-} from "react-native";
+import { View, Text, Image, StyleSheet, TouchableOpacity, ScrollView } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import Swiper from "react-native-swiper";
 
@@ -28,8 +21,8 @@ const HomeView = () => {
         />
         <View style={styles.headerTriangle}></View>
         <View style={styles.headerCaption}>
-          <Text style={styles.headerTitle}>Your App Title</Text>
-          <Text style={styles.headerSubtitle}>Your App Subtitle</Text>
+          <Text style={styles.headerTitle}>Fotoğrafınızı Yükleyin</Text>
+          <Text style={styles.headerSubtitle}>Falınıza Hızlıca Bakalım</Text>
         </View>
       </View>
 
@@ -43,7 +36,7 @@ const HomeView = () => {
               source={require("@/assets/step_01.png")}
               style={styles.featureImage}
             />
-            <Text style={styles.featureText}>Take Photo</Text>
+            <Text style={styles.featureText}>Fotoğraf Çek</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.featureItem}
@@ -53,7 +46,7 @@ const HomeView = () => {
               source={require("@/assets/step_02.png")}
               style={styles.featureImage}
             />
-            <Text style={styles.featureText}>Enter Info</Text>
+            <Text style={styles.featureText}>Bilgileri Doldur</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.featureItem}
@@ -63,37 +56,37 @@ const HomeView = () => {
               source={require("@/assets/falcilar22.jpg")}
               style={[styles.featureImage, { borderRadius: 30 }]}
             />
-            <Text style={styles.featureText}>Get Reading</Text>
+            <Text style={styles.featureText}>Falına Bakılsın</Text>
           </TouchableOpacity>
         </Swiper>
       </View>
 
       <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Main Title</Text>
+        <Text style={styles.sectionTitle}>Bloglar</Text>
         <TouchableOpacity
           style={styles.card}
-          onPress={() => navigation.navigate("Blog")}
+          onPress={() => navigation.navigate("BlogScreen")}
         >
           <Image
             source={require("@/assets/coffeeBG.jpg")}
             style={styles.cardImage}
           />
           <View style={styles.cardBody}>
-            <Text style={styles.cardTitle}>Title 1</Text>
-            <Text style={styles.cardText}>Description 1</Text>
+            <Text style={styles.cardTitle}>Kahvenin Hatrı</Text>
+            <Text style={styles.cardText}>Bir fincan kahvenin kırk yıl hatrı vardır.</Text>
           </View>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.card}
-          onPress={() => navigation.navigate("Blog2")}
+          onPress={() => navigation.navigate("Blog2Screen")}
         >
           <Image
             source={require("@/assets/coffeeBG2.jpg")}
             style={styles.cardImage}
           />
           <View style={styles.cardBody}>
-            <Text style={styles.cardTitle}>Title 2</Text>
-            <Text style={styles.cardText}>Description 2</Text>
+            <Text style={styles.cardTitle}>Kahve Diyarı</Text>
+            <Text style={styles.cardText}>Kahve falı dünyasını keşfet</Text>
           </View>
         </TouchableOpacity>
       </View>
@@ -102,17 +95,17 @@ const HomeView = () => {
         <Text style={styles.sectionTitle}>Statistics</Text>
         <View style={styles.card}>
           <View style={styles.cardBody}>
-            <Text style={styles.cardTitle}>1000 Daily Users</Text>
+            <Text style={styles.cardTitle}>Günlük 1678 Kullanıcı</Text>
             <Text style={styles.cardText}>
-              Enjoy the fun of fortune-telling!
+             Falınızın tadını çıkarın!
             </Text>
           </View>
         </View>
         <View style={styles.card}>
           <View style={styles.cardBody}>
-            <Text style={styles.cardTitle}>5000 Total Readings</Text>
+            <Text style={styles.cardTitle}>Toplan 5612 fala bakıldı</Text>
             <Text style={styles.cardText}>
-              We specialize in coffee fortune-telling!
+              Kahve falında 1 numarayız!
             </Text>
           </View>
         </View>

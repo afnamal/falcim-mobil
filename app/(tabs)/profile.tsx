@@ -7,6 +7,7 @@ import {
   StyleSheet,
   ActivityIndicator,
 } from "react-native";
+import auth from '@react-native-firebase/auth';
 
 const LoginScreen = () => {
   const [email, setEmail] = useState("");
@@ -14,19 +15,19 @@ const LoginScreen = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  const handleLogin = () => {
+  const handleLogin = async () => {
     setLoading(true);
     setError("");
 
-    // Simulate an API call
-    setTimeout(() => {
+    try {
+      await auth().signInWithEmailAndPassword(email, password);
+      alert("Login successful!");
+    } catch (e) {
+        console.log(e)
+      setError("Invalid email or password");
+    } finally {
       setLoading(false);
-      if (email === "test@example.com" && password === "password") {
-        alert("Login successful!");
-      } else {
-        setError("Invalid email or password");
-      }
-    }, 1500);
+    }
   };
 
   return (
