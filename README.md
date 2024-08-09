@@ -6,29 +6,6 @@
 
 The **Falcım** web application is a user-friendly platform where users can experience various types of fortune-telling, including coffee reading, palm reading, and tarot reading. The mobile application expands on this platform, making it easy for users to access fortune-telling services while on the move.
 
-## Features
-
-### 1. **Home Page**
-The home page of the application is an introductory screen where users can explore the available fortune-telling types and other services. From here, users can start their fortune-telling journey.
-
-![Home Page](https://firebasestorage.googleapis.com/v0/b/chat-api-aa04a.appspot.com/o/mobile%2Ffalcim-anasayfa.jpeg?alt=media&token=0f3a0c2d-59cb-4141-831c-e13060d0c9d8)
-![Home Page 2](https://firebasestorage.googleapis.com/v0/b/chat-api-aa04a.appspot.com/o/mobile%2Ffalcim-anasayfa2.jpeg?alt=media&token=8012faa5-3ae5-4c2f-a9f2-f413efb3777a)
-
-### 2. **Login Screen**
-The login screen allows users to sign in to their accounts. Users can log in with their username and password.
-
-![Login Screen](https://firebasestorage.googleapis.com/v0/b/chat-api-aa04a.appspot.com/o/mobile%2Ffalcim-giris.jpeg?alt=media&token=0ee080af-abf1-48ba-8195-5bae7f20695d)
-
-### 3. **Blog Page**
-The blog page contains interesting and educational content related to coffee and fortune-telling culture. Users can explore the world of coffee fortune-telling here.
-
-![Blog Page](https://firebasestorage.googleapis.com/v0/b/chat-api-aa04a.appspot.com/o/mobile%2Ffalcim-blog.jpeg?alt=media&token=4c38e3d9-60b7-446a-9aed-20345bcce4d4)
-
-### 4. **Help Page**
-The help page provides answers to frequently asked questions and more information about our services.
-
-![Help Page](https://firebasestorage.googleapis.com/v0/b/chat-api-aa04a.appspot.com/o/mobile%2Ffalcim-yardim.jpeg?alt=media&token=b84f4607-f9a0-460b-bd22-dbc59176828f)
-
 ## Technologies
 
 - **React Native:** The primary technology used to develop the application.
@@ -57,21 +34,21 @@ To run the project locally on your machine, follow these steps:
 
 ## Screenshots
 
-### Home Page
+Below are some example screenshots from within the application:
 
-![Home Page](https://firebasestorage.googleapis.com/v0/b/chat-api-aa04a.appspot.com/o/mobile%2Ffalcim-anasayfa.jpeg?alt=media&token=0f3a0c2d-59cb-4141-831c-e13060d0c9d8)
+<p align="center">
+  <img src="https://firebasestorage.googleapis.com/v0/b/chat-api-aa04a.appspot.com/o/mobile%2Ffalcim-anasayfa.jpeg?alt=media&token=0f3a0c2d-59cb-4141-831c-e13060d0c9d8" alt="Home Page" width="45%"/>
+  <img src="https://firebasestorage.googleapis.com/v0/b/chat-api-aa04a.appspot.com/o/mobile%2Ffalcim-anasayfa2.jpeg?alt=media&token=8012faa5-3ae5-4c2f-a9f2-f413efb3777a" alt="Home Page 2" width="45%"/>
+</p>
 
-### Login Screen
+<p align="center">
+  <img src="https://firebasestorage.googleapis.com/v0/b/chat-api-aa04a.appspot.com/o/mobile%2Ffalcim-giris.jpeg?alt=media&token=0ee080af-abf1-48ba-8195-5bae7f20695d" alt="Login Screen" width="45%"/>
+  <img src="https://firebasestorage.googleapis.com/v0/b/chat-api-aa04a.appspot.com/o/mobile%2Ffalcim-blog.jpeg?alt=media&token=4c38e3d9-60b7-446a-9aed-20345bcce4d4" alt="Blog Page" width="45%"/>
+</p>
 
-![Login Screen](https://firebasestorage.googleapis.com/v0/b/chat-api-aa04a.appspot.com/o/mobile%2Ffalcim-giris.jpeg?alt=media&token=0ee080af-abf1-48ba-8195-5bae7f20695d)
-
-### Blog Page
-
-![Blog Page](https://firebasestorage.googleapis.com/v0/b/chat-api-aa04a.appspot.com/o/mobile%2Ffalcim-blog.jpeg?alt=media&token=4c38e3d9-60b7-446a-9aed-20345bcce4d4)
-
-### Help Page
-
-![Help Page](https://firebasestorage.googleapis.com/v0/b/chat-api-aa04a.appspot.com/o/mobile%2Ffalcim-yardim.jpeg?alt=media&token=b84f4607-f9a0-460b-bd22-dbc59176828f)
+<p align="center">
+  <img src="https://firebasestorage.googleapis.com/v0/b/chat-api-aa04a.appspot.com/o/mobile%2Ffalcim-yardim.jpeg?alt=media&token=b84f4607-f9a0-460b-bd22-dbc59176828f" alt="Help Page" width="45%"/>
+</p>
 
 ## Contribution
 
