@@ -9,34 +9,34 @@ import {
 } from "react-native";
 import auth from '@react-native-firebase/auth';
 
-const LoginScreen = () => {
+const GirisEkrani = () => {
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
+  const [sifre, setSifre] = useState("");
+  const [yukleniyor, setYukleniyor] = useState(false);
+  const [hata, setHata] = useState("");
 
-  const handleLogin = async () => {
-    setLoading(true);
-    setError("");
+  const handleGiris = async () => {
+    setYukleniyor(true);
+    setHata("");
 
     try {
-      await auth().signInWithEmailAndPassword(email, password);
-      alert("Login successful!");
+      await auth().signInWithEmailAndPassword(email, sifre);
+      alert("Giriş başarılı!");
     } catch (e) {
         console.log(e)
-      setError("Invalid email or password");
+      setHata("Geçersiz e-posta veya şifre");
     } finally {
-      setLoading(false);
+      setYukleniyor(false);
     }
   };
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Login</Text>
+    <View style={stil.container}>
+      <Text style={stil.baslik}>Giriş Yap</Text>
 
       <TextInput
-        style={styles.input}
-        placeholder="Email"
+        style={stil.input}
+        placeholder="E-posta"
         value={email}
         onChangeText={setEmail}
         keyboardType="email-address"
@@ -44,31 +44,31 @@ const LoginScreen = () => {
       />
 
       <TextInput
-        style={styles.input}
-        placeholder="Password"
-        value={password}
-        onChangeText={setPassword}
+        style={stil.input}
+        placeholder="Şifre"
+        value={sifre}
+        onChangeText={setSifre}
         secureTextEntry
       />
 
-      {error ? <Text style={styles.errorText}>{error}</Text> : null}
+      {hata ? <Text style={stil.hataMetni}>{hata}</Text> : null}
 
       <TouchableOpacity
-        style={styles.button}
-        onPress={handleLogin}
-        disabled={loading}
+        style={stil.buton}
+        onPress={handleGiris}
+        disabled={yukleniyor}
       >
-        {loading ? (
+        {yukleniyor ? (
           <ActivityIndicator size="small" color="#fff" />
         ) : (
-          <Text style={styles.buttonText}>Login</Text>
+          <Text style={stil.butonMetni}>Giriş Yap</Text>
         )}
       </TouchableOpacity>
     </View>
   );
 };
 
-const styles = StyleSheet.create({
+const stil = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "center",
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
     padding: 20,
     backgroundColor: "#f5f5f5",
   },
-  title: {
+  baslik: {
     fontSize: 24,
     marginBottom: 20,
   },
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: "#ddd",
   },
-  button: {
+  buton: {
     width: "100%",
     padding: 15,
     backgroundColor: "#007BFF",
@@ -97,14 +97,14 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginTop: 20,
   },
-  buttonText: {
+  butonMetni: {
     color: "#fff",
     fontSize: 16,
   },
-  errorText: {
+  hataMetni: {
     color: "red",
     marginTop: 10,
   },
 });
 
-export default LoginScreen;
+export default GirisEkrani;

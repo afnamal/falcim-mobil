@@ -1,7 +1,13 @@
 import React from "react";
-import { View, Text, Image, StyleSheet, TouchableOpacity, ScrollView } from "react-native";
+import {
+  View,
+  Text,
+  Image,
+  StyleSheet,
+  TouchableOpacity,
+  ScrollView,
+} from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import Swiper from "react-native-swiper";
 
 const HomeView = () => {
   const navigation = useNavigation();
@@ -26,41 +32,6 @@ const HomeView = () => {
         </View>
       </View>
 
-      <View style={styles.features}>
-        <Swiper showsPagination={true} loop={true}>
-          <TouchableOpacity
-            style={styles.featureItem}
-            onPress={() => pushLogin("/fal/kahve")}
-          >
-            <Image
-              source={require("@/assets/step_01.png")}
-              style={styles.featureImage}
-            />
-            <Text style={styles.featureText}>Fotoğraf Çek</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.featureItem}
-            onPress={() => pushLogin("/fal/kahve")}
-          >
-            <Image
-              source={require("@/assets/step_02.png")}
-              style={styles.featureImage}
-            />
-            <Text style={styles.featureText}>Bilgileri Doldur</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.featureItem}
-            onPress={() => pushLogin("/fal/kahve")}
-          >
-            <Image
-              source={require("@/assets/falcilar22.jpg")}
-              style={[styles.featureImage, { borderRadius: 30 }]}
-            />
-            <Text style={styles.featureText}>Falına Bakılsın</Text>
-          </TouchableOpacity>
-        </Swiper>
-      </View>
-
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Bloglar</Text>
         <TouchableOpacity
@@ -73,7 +44,9 @@ const HomeView = () => {
           />
           <View style={styles.cardBody}>
             <Text style={styles.cardTitle}>Kahvenin Hatrı</Text>
-            <Text style={styles.cardText}>Bir fincan kahvenin kırk yıl hatrı vardır.</Text>
+            <Text style={styles.cardText}>
+              Bir fincan kahvenin kırk yıl hatırı vardır.
+            </Text>
           </View>
         </TouchableOpacity>
         <TouchableOpacity
@@ -92,21 +65,17 @@ const HomeView = () => {
       </View>
 
       <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Statistics</Text>
-        <View style={styles.card}>
+        <Text style={styles.sectionTitle}>İstatistikler</Text>
+        <View style={styles.statCard}>
           <View style={styles.cardBody}>
             <Text style={styles.cardTitle}>Günlük 1678 Kullanıcı</Text>
-            <Text style={styles.cardText}>
-             Falınızın tadını çıkarın!
-            </Text>
+            <Text style={styles.cardText}>Falınızın tadını çıkarın!</Text>
           </View>
         </View>
-        <View style={styles.card}>
+        <View style={styles.statCard}>
           <View style={styles.cardBody}>
-            <Text style={styles.cardTitle}>Toplan 5612 fala bakıldı</Text>
-            <Text style={styles.cardText}>
-              Kahve falında 1 numarayız!
-            </Text>
+            <Text style={styles.cardTitle}>Toplam 5612 fala bakıldı</Text>
+            <Text style={styles.cardText}>Kahve falında 1 numarayız!</Text>
           </View>
         </View>
       </View>
@@ -118,92 +87,87 @@ const styles = StyleSheet.create({
   header: {
     position: "relative",
     textAlign: "center",
-    marginBottom: 40,
+    marginBottom: 20,
   },
   headerImage: {
     width: "100%",
-    height: 400,
+    height: 300,
     resizeMode: "cover",
   },
   headerTriangle: {
     width: "100%",
     height: 0,
-    paddingTop: 30,
-    backgroundColor: "white",
+    borderTopWidth: 30,
+    borderTopColor: "#fff",
+    borderLeftWidth: 0,
+    borderRightWidth: 0,
+    marginTop: -10,
   },
   headerCaption: {
-    marginTop: 30,
-    color: "#1d1b1b",
+    marginTop: 10,
+    alignItems: "center",
+    justifyContent: "center",
+    paddingHorizontal: 10,
   },
   headerTitle: {
-    fontSize: 28,
+    fontSize: 24,
     fontWeight: "bold",
+    color: "#333",
   },
   headerSubtitle: {
-    fontSize: 18,
+    fontSize: 16,
     color: "#a00",
     fontWeight: "bold",
     marginTop: 5,
   },
-  features: {
-    maxWidth: 1200,
-    margin: "0 auto",
-    padding: 40,
-  },
-  featureItem: {
-    textAlign: "center",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    fontSize: "large",
-    transition: "transform 0.3s ease-in-out",
-    cursor: "pointer",
-  },
-  featureImage: {
-    width: "100%",
-    maxWidth: 220,
-    marginBottom: 10,
-  },
-  featureText: {
-    fontSize: 16,
-    fontWeight: "bold",
-  },
   section: {
-    backgroundColor: "#f7f7f7",
-    padding: 60,
+    backgroundColor: "#f9f9f9",
+    paddingVertical: 30,
+    paddingHorizontal: 20,
   },
   sectionTitle: {
-    fontSize: 28,
+    fontSize: 24,
     color: "#444",
     fontWeight: "bold",
-    marginBottom: 40,
+    marginBottom: 20,
     textAlign: "center",
   },
   card: {
-    borderRadius: 15,
+    borderRadius: 10,
     overflow: "hidden",
     marginBottom: 20,
     backgroundColor: "#fff",
     shadowColor: "#000",
-    shadowOpacity: 0.2,
+    shadowOpacity: 0.1,
     shadowRadius: 10,
-    elevation: 5,
+    elevation: 3,
   },
   cardImage: {
     width: "100%",
-    height: 200,
+    height: 180,
     resizeMode: "cover",
   },
   cardBody: {
-    padding: 20,
+    padding: 15,
   },
   cardTitle: {
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: "bold",
   },
   cardText: {
     color: "#666",
+    marginTop: 5,
+  },
+  statCard: {
+    borderRadius: 10,
+    overflow: "hidden",
+    marginBottom: 20,
+    backgroundColor: "#fff",
+    shadowColor: "#000",
+    shadowOpacity: 0.1,
+    shadowRadius: 10,
+    elevation: 3,
+    padding: 15,
   },
 });
 
